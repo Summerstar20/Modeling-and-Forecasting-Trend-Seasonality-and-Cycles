@@ -45,11 +45,11 @@ require(moments)
 ```
 
 
-## I. Introduction
+## Introduction
 
 In this project, we choose to study 30 year mortgage rate and 10 year treasury constant maturity rate. Mortage rate is a primary consideration for homebuyers looking to finance a new home purchase with a mortgage loan. Treasury yeild is the return on investment on US government's debt obligations, which influence the interest rate and can indicate the economic outlook. Additionally, these two rates are closely related. We pick data from 1985-01 to 2020-05 monthly. In this project, we firstly build models, trying to fit the trend, seasonality and cycle in each rate. Then we forecast the two rates using our model and other three different models. Finally, we studied the relationships between two rates. 
 
-## II. Results
+## Results
 
 First, we get the monthly data, create a time series object and produce a time-series plot including the respective ACF and PACF plots.
 
@@ -753,22 +753,21 @@ plot(modelfor2, which = 3)
 GARCH model predicts that the original series (residuals of 30 year fixed rate mortgage) will flatten out in the next 12 months. GARCH model predicts  the unconditional volatility of the residuals of the 10 year treasury constant maturity rate fluctuates oevr time and has an increasing trend. \
 
 
-## III.Conclusions and Future Work
+## Conclusions and Future Work
 
 In our project, We fit a ARMA(0,1,1) and seasonal AR(2) model for 30-year fixed rate mortgage, and a ARMA(3,1,0) and seasonal AR(2) model for 10 Year treasury constant maturity rate. Both model fit the series well from the resudual test,respective CUSUM test and diagnostic statistics. There exists areas for improvement since the acf and pacf graphs of the residuals show there is some dynamic left. Then we used our model and three other models(ARIMA, HoltWinters, ETS) to forecast the seires. According to MAPE test and real world data, HoltWinters model gives the best forecast. Next, we used VAR model, impulse response functions and Granger-Causality test to stuied their relationships. The results show that the two series are closely related. Additionally, we also used the VAR model to forecast the two series and GARCH model to forecast the residuals of two tiem series. VAR model did not give a better forecast compared to the real world data. Particularly, on March 15, 2020, the Federal Reserve lowered the target for the fed funds rate to virtually zero. That lowered rates on adjustable-rate mortgages that follow the Fed's benchmark rate. Since we did not include the external factors, news and shocks in the data, such as  the Covid 19 pandemic starting from Janurary 2020 and virtually zero fed fund rate lowered by Federal Reserve in March 2020, then we won't get the most accurate predicition. But, HoltWinters and ETS still did a great job when forecasting. Also, we found that fixed mortgage rates follow treasury yields and treasury yields follow fixed mortgage rates as well according to Granger-Causality Test. The best time to get a low fixed-rate home loan is when Treasury yields are low. Low yields on Treasurys mean lower rates on mortgages. Homebuyers can afford a larger home. The increased demand stimulates the real estate market, which can boost the economy.\
 In conclusion, we build models that could fit the seires relatively well, while there exists large improvement in forecasting. We need to take external facotrs, like news, shock, government policy changes, and so on, into considerations, which will imporve our models to some degree. \
 
 
 
-## IV. References
+## References
 
-1. “30$-$Year Fixed Rate Mortgage Average in the United States.” FRED, 28 May 2020, fred.stlouisfed.org/series/MORTGAGE30US.\
+1. “30-Year Fixed Rate Mortgage Average in the United States.” FRED, 28 May 2020, fred.stlouisfed.org/series/MORTGAGE30US.\
 
 2. “10-Year Treasury Constant Maturity Rate.” FRED, 2 June 2020, fred.stlouisfed.org/series/DGS10.\
 
 
 3. George Athanasopoulos, Rob J Hyndman. (2018). Forecasting principles and practice (2nd ed., chapter 9-14). Monash University, Australia.\
-4. Randall R. Rojas. (2020). Lecture Notes (10-16). UCLA.\
 
 
 
