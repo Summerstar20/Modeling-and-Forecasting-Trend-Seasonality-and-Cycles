@@ -1,0 +1,12 @@
+name: "Forecasting"
+output_dir: "."
+navbar:
+  title: "Forecasting Using Trend, Seasonality and Cycles"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Project TSC"
+      href: Project-TSC.html
+output:
+  html_document:
+    theme: flatly 
